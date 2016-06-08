@@ -5,7 +5,6 @@
 
 
 #Loading libraries
-#library(ca) #Correspondence analysis
 library(ggplot2)
 library(FactoMineR) #for computing Correspondence Analysis
 library(factoextra) #for visualizing Correspondence Analysis
