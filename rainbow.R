@@ -46,16 +46,14 @@ getLifeRainbow <- function (dadDOB, momDOB, persoDOB, nkid, partDOB)
 	   d3 <-  c("Decline", "In middle adulthood", "Focusing on essentials")
 	   d4 <-  c("Decline", "In late adulthood", "Reducing working hours")
 	   
-	   d <- rbind(d1,d2,d3,d4)
-	 
-	 
+	   d <- rbind(d1,d2,d3,d4)	
+	   
+	   m1 <- c("Maintenance", "In adolescence", "Verifying current occupational choice")
+	   m2 <- c("Maintenance", "In early adulthood", "Making occupational position secure")
+	   m3 <- c("Maintenance", "In middle adulthood", "Holding one's own against competition")
+	   m4 <- c("Maintenance", "In late adulthood", "Keeping what one enjoys")
 	
-	m1 <- c("Maintenance", "In adolescence", "Verifying current occupational choice")
-	m2 <- c("Maintenance", "In early adulthood", "Making occupational position secure")
-	m3 <- c("Maintenance", "In middle adulthood", "Holding one's own against competition")
-	m4 <- c("Maintenance", "In late adulthood", "Keeping what one enjoys")
-	
-	m <- rbind(m1,m2,m3,m4)
+	   m <- rbind(m1,m2,m3,m4)
 	
 	e1 <- c("Establishment", "In adolescence", "Getting started in a chosen field")
 	e2 <- c("Establishment", "In early adulthood", "Settling down in a suitable position")
@@ -85,14 +83,13 @@ getLifeRainbow <- function (dadDOB, momDOB, persoDOB, nkid, partDOB)
 	#curve(-x * log (x) - (1 - x) * log(1 - x),col=c("blue"), xlab = "x", ylab = "Entropy", lwd=20)
 	#Use the PDF career-theory-model-super.pdf for some qualitative parameter
 
-    print(paste(dadDOB,momDOB,persoDOB,parternDOB,nbkid,sep = "-"))
+    #print(paste(dadDOB,momDOB,persoDOB,parternDOB,nbkid,sep = "-"))
    
 }#End-function
 
 
 getOldYear <- function (paramDate){
 
-        #For example "1989-03-17"
 		#System time which the date of today minus the date written
         age  <- round((as.Date(Sys.time()) - as.Date(paramDate))/365) 
         age  <- str_replace_all(age, "‘[:alpha:]’","")
