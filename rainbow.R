@@ -9,15 +9,15 @@ source("dSuperData.R")
 
 getLifeRainbow <- function (dadDOB, momDOB, persoDOB, nkid, partDOB)
 {
-    #Receiving inputData
+#Receiving inputData
 	
-	#Call the function for calculating the Old Year
+#Call the function for calculating the Old Year
     dadDOB      <- getOldYear(dadDOB)
 	momDOB      <- getOldYear(momDOB)
     persoDOB    <- getOldYear(persoDOB)
 	parternDOB  <- getOldYear(partDOB)
 	
-	#Number of kids
+#Number of kids
 	nbkid  <- nkid
 	
 	#curve(-x * log (x) - (1 - x) * log(1 - x),col=c("blue"), xlab = "x", ylab = "Entropy", lwd=20)
@@ -29,7 +29,7 @@ getLifeRainbow <- function (dadDOB, momDOB, persoDOB, nkid, partDOB)
 
 getOldYear <- function (paramDate){
 
-		#System time which the date of today minus the date written
+#System time which the date of today minus the date written
         age  <- round((as.Date(Sys.time()) - as.Date(paramDate))/365) 
         age  <- str_replace_all(age, "‘[:alpha:]’","")
 		#Return
