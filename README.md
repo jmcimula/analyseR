@@ -1,0 +1,3 @@
+# analyseR
+
+Advanced stat analysis
