@@ -31,7 +31,7 @@ evimp(fit)
 # make predictions
 predictions <- predict(fit, msleep)
 # summarize accuracy
-rmse <- mean((msleep$Consumption - predictions)^2)
+rmse <- sqrt( mean((msleep$Consumption - predictions)^2))
 print(rmse)
 
 
@@ -45,7 +45,7 @@ summary(fit)
 # make predictions
 predictions <- predict(fit, msleep)
 # summarize accuracy
-rmse <- mean((msleep$Consumption - predictions)^2)
+rmse <- sqrt( mean((msleep$Consumption - predictions)^2))
 print(rmse)
 
 #k-Nearest Neighbor
@@ -58,7 +58,7 @@ summary(fit)
 # make predictions
 predictions <- predict(fit, msleep[,1:4])
 # summarize accuracy
-rmse <- mean((msleep$Consumption - predictions)^2)
+rmse <- sqrt( mean((msleep$Consumption - predictions)^2))
 print(rmse)
 
 #Neural Network
@@ -74,5 +74,5 @@ summary(fit)
 # make predictions
 predictions <- predict(fit, x, type="raw")
 # summarize accuracy
-rmse <- mean((y - predictions)^2)
+rmse <- sqrt( mean((y - predictions)^2))
 print(rmse)
